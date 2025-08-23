@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+}
+
+canvas {
+    display: block;
+    cursor: none;
+    touch-action: none;
+    image-rendering: pixelated;
+}
+
+#startScreen, #gameOverScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15,32,39,0.95) 0%, rgba(44,83,100,0.95) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+}
+
+#gameOverScreen {
+    display: none;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #4ecdc4;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+button {
+    padding: 15px 40px;
+    margin: 10px;
+    font-size: 1.2em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(102,126,234,0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.score {
+    font-size: 1.5em;
+    margin: 10px;
+    color: #ffd93d;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.instructions {
+    text-align: center;
+    margin: 20px;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.controls {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.control-item {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.key {
+    display: inline-block;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    h1 { font-size: 2.5em; }
+    button { padding: 12px 30px; font-size: 1em; }
+}

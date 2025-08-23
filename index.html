@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>River Runner ULTIMATE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="startScreen">
+            <h1>⚓ RIVER RUNNER</h1>
+            <p class="subtitle">ULTIMATE EDITION</p>
+            <div class="instructions">
+                <div class="controls">
+                    <div class="control-item">🎯 <span class="key">MOUSE/TOUCH</span> Move boat</div>
+                    <div class="control-item">🔫 <span class="key">CLICK/TAP</span> Shoot cannons</div>
+                    <div class="control-item">💥 <span class="key">SPACE</span> Super shot (when charged)</div>
+                </div>
+                <p style="margin-top: 15px; color: #4ecdc4;">Collect: ⭐ Stars (+10pts) ❤️ Lives 🛡️ Shields ⚡ Rapid Fire</p>
+                <p style="color: #ff6b6b;">Destroy enemy boats and barges!</p>
+            </div>
+            <button onclick="startGame()">START GAME</button>
+        </div>
+
+        <div id="gameOverScreen">
+            <h2>GAME OVER!</h2>
+            <p class="score">Final Score: <span id="finalScore">0</span></p>
+            <p class="score">Best Score: <span id="bestScore">0</span></p>
+            <p class="score">Enemies Destroyed: <span id="enemiesDestroyed">0</span></p>
+            <button onclick="restartGame()">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="game.js" defer></script>
+</body>
+</html>
